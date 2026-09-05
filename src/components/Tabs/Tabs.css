@@ -1,0 +1,69 @@
+.tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-overflowing {
+  mask-image: linear-gradient(90deg, black calc(100% - 28px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, black calc(100% - 28px), transparent 100%);
+}
+
+.tab {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 2px;
+  right: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--border-strong);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+.tab:hover {
+  color: var(--text-mid);
+}
+.tab:hover::after {
+  transform: scaleX(1);
+}
+.tab:active {
+  transform: scale(0.97);
+}
+.tab-active {
+  color: var(--text-hi);
+}
+.tab-active::after {
+  transform: scaleX(0);
+}
+
+.tabs-indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  border-radius: 2px;
+  box-shadow: 0 0 12px -2px rgba(124, 147, 255, 0.7);
+}

@@ -1,0 +1,29 @@
+.market-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.range-card {
+  padding: var(--space-5);
+}
+
+.range-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-mid);
+  margin: 0 0 var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .market-overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .market-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,107 @@
+.holder-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.holder-chart-card {
+  padding: var(--space-5);
+}
+
+.holder-total {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: var(--space-4);
+}
+.holder-total-value {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+.holder-total-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-dim);
+}
+
+.holder-donut-wrap {
+  margin: 0 auto var(--space-4);
+  max-width: 260px;
+}
+
+.holder-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+}
+
+.holder-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.holder-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.holder-legend-name {
+  color: var(--text-mid);
+  flex: 1;
+}
+.holder-legend-value {
+  color: var(--text-hi);
+  font-weight: 600;
+}
+
+.holder-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.holder-info-card {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.holder-info-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-dim);
+}
+.holder-info-value {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--text-hi);
+}
+
+@media (max-width: 900px) {
+  .holder-grid {
+    grid-template-columns: 1fr;
+  }
+  .holder-info-cards {
+    flex-direction: row;
+  }
+  .holder-info-card {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .holder-info-cards {
+    flex-direction: column;
+  }
+}

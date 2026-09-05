@@ -1,0 +1,140 @@
+.coins-table-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.coins-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.coins-table th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  font-weight: 700;
+  padding: 13px 18px;
+  background: rgba(255, 255, 255, 0.015);
+  border-bottom: 1px solid var(--border);
+}
+
+.coins-table td {
+  padding: 14px 18px;
+  font-size: 13.5px;
+  color: var(--text-hi);
+  border-bottom: 1px solid var(--border);
+}
+
+.coins-table-rank-col {
+  width: 64px;
+  color: var(--text-dim);
+}
+
+.coins-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.coins-table tbody tr {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.coins-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+.coins-table tbody tr:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: -2px;
+}
+
+.coins-table-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coins-table-name {
+  font-weight: 600;
+  font-size: 13.5px;
+}
+.coins-table-symbol {
+  font-size: 11.5px;
+  color: var(--text-dim);
+}
+
+.coins-table-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 700;
+}
+
+.coins-table-empty {
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.coins-cards {
+  display: none;
+  flex-direction: column;
+}
+
+.coins-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: var(--space-4);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+.coins-card:last-child {
+  border-bottom: none;
+}
+.coins-card:hover,
+.coins-card:focus-visible {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.coins-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.coins-card-rank {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.coins-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+}
+
+.coins-card-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 700px) {
+  .coins-table {
+    display: none;
+  }
+  .coins-cards {
+    display: flex;
+  }
+}

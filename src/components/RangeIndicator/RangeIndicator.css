@@ -1,0 +1,86 @@
+.range-indicator {
+  width: 100%;
+}
+
+.range-track {
+  position: relative;
+  height: 6px;
+  border-radius: 4px;
+  background: var(--surface-2);
+  margin-bottom: var(--space-3);
+}
+
+.range-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  box-shadow: 0 0 12px -1px rgba(53, 224, 166, 0.5);
+  transition: width 0.5s var(--ease);
+}
+
+.range-marker {
+  position: absolute;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--text-hi);
+  border: 2px solid var(--bg);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1px var(--border-strong), 0 0 14px -2px rgba(53, 224, 166, 0.8);
+  transition: left 0.5s var(--ease);
+}
+
+.range-marker::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(53, 224, 166, 0.55);
+  animation: range-pulse 2.2s ease-out infinite;
+}
+
+@keyframes range-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.range-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.range-label-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.range-label-current {
+  align-items: center;
+}
+.range-label-right {
+  align-items: flex-end;
+}
+
+.range-label-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-hi);
+}
+.range-label-current .range-label-value {
+  color: var(--accent);
+}
+.range-label-name {
+  font-size: 11px;
+  color: var(--text-dim);
+}

@@ -1,0 +1,134 @@
+.market-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.market-table-card {
+  overflow: hidden;
+}
+
+.market-table-loading,
+.market-table-empty {
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.market-table th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  font-weight: 700;
+  padding: 13px 18px;
+  background: rgba(255, 255, 255, 0.015);
+  border-bottom: 1px solid var(--border);
+}
+
+.market-table td {
+  padding: 14px 18px;
+  font-size: 13.5px;
+  color: var(--text-hi);
+  border-bottom: 1px solid var(--border);
+}
+
+.market-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.market-table tbody tr {
+  transition: background 0.15s ease;
+}
+.market-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.market-exchange-cell {
+  font-weight: 600;
+}
+
+.market-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+}
+
+.liquidity-badge {
+  display: inline-flex;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+.liquidity-high {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: rgba(53, 224, 166, 0.22);
+}
+.liquidity-medium {
+  background: rgba(242, 184, 75, 0.12);
+  color: var(--gold);
+  border-color: rgba(242, 184, 75, 0.22);
+}
+.liquidity-low {
+  background: var(--negative-soft);
+  color: var(--negative);
+  border-color: rgba(251, 115, 115, 0.22);
+}
+
+.market-cards {
+  display: none;
+  flex-direction: column;
+}
+
+.market-card {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.market-card:last-child {
+  border-bottom: none;
+}
+
+.market-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.market-card-exchange {
+  font-weight: 600;
+  font-size: 14px;
+}
+.market-card-pair {
+  font-size: 12.5px;
+  color: var(--text-mid);
+}
+.market-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .market-table {
+    display: none;
+  }
+  .market-cards {
+    display: flex;
+  }
+}

@@ -1,0 +1,27 @@
+.research-page {
+  padding-bottom: var(--space-7);
+}
+
+.key-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.research-tabs-wrap {
+  margin: var(--space-7) 0 0;
+}
+
+@media (max-width: 900px) {
+  .key-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .key-stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

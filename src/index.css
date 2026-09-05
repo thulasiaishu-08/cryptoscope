@@ -1,0 +1,6 @@
+@import './styles/tokens.css';
+@import './styles/layout.css';
+
+main {
+  min-height: calc(100vh - var(--header-h));
+}
